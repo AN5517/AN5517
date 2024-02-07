@@ -1,0 +1,345 @@
+body {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* IE */
+    
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* text-overflow: ellipsis; */
+}
+
+
+/* Theme classes */
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+p {
+
+}
+
+.body {
+    
+}
+
+.body.light {
+    background-color: aqua;
+}
+
+.body.dark {
+    background-color: darkgrey;
+}
+
+.floater {
+    position: relative;
+    border-radius: 20px;
+}
+
+.floater.light {
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.floater.dark {
+    /* change it */
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Header bar classes */
+
+.header {
+    align-self: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+    height: 90px;
+    margin-bottom: 10px;
+    background-color: #f2f2f2;
+}
+
+.header .left { /* child of class header having class left */
+    /* clock needed? */
+    /* Positioning */
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    width: 10%;
+    background: red; /* for identification */
+}
+
+.header .center {
+/* Positioning */
+flex: 1; /* Takes up remaining space */
+    text-align: center;
+}
+
+.header .right {
+    /* Positioning */
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    width: 10%;
+    align-items: center;
+}
+
+.theme-toggle-button {
+    /* Apply width and height to 'box' not its content */
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* IE */
+    
+    align-self: center;
+    padding: 20%;
+    object-fit: contain;
+    max-width: 90%;
+    max-height: 90%;
+    transition: all 0.4s;
+}
+
+.theme-toggle-button:hover {
+    /* Apply width and height to 'box' not its content */
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* IE */
+    
+    align-self: center;
+    
+    /* change */
+    padding: 20%;
+    object-fit: contain;
+    max-width: 90%;
+    max-height: 90%;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+
+/* Content region classes */
+
+.content {
+    position: relative;
+    overflow: hidden;
+    flex: 1; /* Takes up remaining space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    width: auto;
+    height: auto;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* background-color: magenta; */
+}
+
+
+/* Section classes */
+
+.corner {
+    position: absolute;
+    height: auto;
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.5s cubic-bezier(.88,.01,.49,.8);
+    /* transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1); */
+}
+
+.corner:hover {
+    position: absolute;
+    height: auto;
+    width: 120px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.5s cubic-bezier(.51,.2,.12,.99);
+    /* transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1); */
+}
+
+.top-left {
+    /* Positioning */
+    top: 20px;
+    left: 20px;
+}
+
+.top-right {
+    /* Positioning */
+    top: 20px;
+    right: 20px;
+}
+
+.bottom-left {
+    /* Positioning */
+    bottom: 20px;
+    left: 20px;
+}
+
+.bottom-right {
+    /* Positioning */
+    bottom: 20px;
+    right: 20px;
+    
+}
+
+.button-section {
+    /* Logo for any section */
+    cursor: pointer;
+}
+
+.center-expanded {
+    /* Positioning & size */
+    
+    /* Apply width and height to 'box' not its content */
+    
+    position: absolute;
+    width: 95%;
+    height: 90%;
+    padding: 20px;
+    /* overflow: hidden; */
+    text-align: center;
+    
+    background-color: blueviolet;
+    transition: all 0.4s cubic-bezier(0.7, 0.1, 0.3, 0.9);
+}
+
+.back-button {
+    position: absolute;
+    height: 40px;
+    top: 30px;
+    left: 40px;
+    transition: all 0.3s ease;
+    /* background-repeat: no-repeat; */
+}
+
+.back-button:hover {
+    height: 50px;
+    top: 25px;
+    left: 35px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+/* About section classes */
+
+/* Name and profile pic */
+.name-photo-container {
+    /* add font stuff */
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.profile-image {
+    height: 300px;
+    border-radius: 40%;
+    margin: 0 20px;
+}
+
+.name-part {
+    flex: 1;
+    text-align: center;
+}
+
+.about-info .version {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.about-info .description {
+    font-size: 16px;
+    color: #444;
+    /* margin-bottom: 30px; */
+}
+
+.cv-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* CHANGE */
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    margin: 20px;
+    transition: background-color 0.3s;
+}
+
+.cv-button:hover {
+    /* CHANGE color */
+    background-color: #0056b3;
+}
+
+.social-handles {
+    
+}
+
+.social-handles img {
+    height: 30px;
+    margin: 5px;
+}
+
+
+/* Section content classes */
+
+.content-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-element {
+    text-align: left;
+}
+
+.content-element.light {
+
+}
+
+.content-element.dark {
+
+}
+
+/* Footer classes */
+
+.footer {
+    align-self: center;
+    text-align: center;
+    width: 95%;
+    height: auto;
+}
+
+.footer.light {
+    background-color: #f2f2f2;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+}
+
+.footer.dark {
+    background-color: grey;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+}
+
+
+/* Overriding class */
+
+.hidden {
+    display: none;
+}
